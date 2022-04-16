@@ -1,0 +1,3 @@
+[submodule "lib/blosc"]
+	path = lib/blosc
+	url = git@github.com:Blosc/hdf5-blosc.git
