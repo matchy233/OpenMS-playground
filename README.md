@@ -26,8 +26,11 @@ There's a well-wrapped [HDF5 plugin](https://github.com/Blosc/hdf5-blosc) for
 HDF5 provided by the BLOSC team. It currently utilizes [BLOSC](https://github.com/Blosc/c-blosc).
 
 We can install the provided plugin globally by copy the built dynamic lib to
+`/path/to/hdf5/plugins` (e.g. `/usr/local/hdf5/lib/plugins` as in the documentation
+ or `/usr/lib/x86_64-linux-gnu/hdf5/plugins` as on **Ubuntu 20.04 LTS**)
 
-It's possible to use [BLOSC2](https://github.com/Blosc/c-blosc2).
+It's also possible to register the filter ad hoc using `register_blosc()` provided
+in `blosc_filter.h`.
 
 ## Reference
 
