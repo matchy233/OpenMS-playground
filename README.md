@@ -1,4 +1,5 @@
 # OpenMS-playground
+
 🎢 Playing with OpenMS functionalities
 
 ## Intro
@@ -31,6 +32,32 @@ We can install the provided plugin globally by copy the built dynamic lib to
 
 It's also possible to register the filter ad hoc using `register_blosc()` provided
 in `blosc_filter.h`.
+
+## Misc
+
+While running `ctest`, some of the tests will always fail even if we build on the latest develop branch:
+
+```diff
+99% tests passed, 12 tests failed out of 2505
+
+Total Test time (real) =  86.46 sec
+
+The following tests FAILED are listed below. Note that the tests marked by `!` only fail on machines without GUI.
+
+```diff
+-        495 - PrecursorIonSelectionPreprocessing_test (Failed)
+-        575 - DetectabilitySimulation_test (Failed)
+-        615 - MRMFeatureSelector_test (Failed)
+!        643 - TOPPView_test (Child aborted)
+!        644 - TSGDialog_test (Child aborted)
+-        2283 - TOPP_OpenPepXL_1_out_2 (Failed)
+-        2288 - TOPP_OpenPepXLLF_1_out_2 (Failed)
+!        2373 - UTILS_INIUpdater_1 (Child aborted)
+!        2374 - UTILS_INIUpdater_1_out (Failed)
+!        2376 - UTILS_INIUpdater_3 (Child aborted)
+!        2377 - UTILS_INIUpdater_3_out (Failed)
+!        2472 - TOPP_ExecutePipeline_1 (Child aborted)
+```
 
 ## Reference
 
